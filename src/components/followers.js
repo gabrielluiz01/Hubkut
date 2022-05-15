@@ -15,6 +15,10 @@ const FollowersContainer = styled.div`
   justify-content: space-between;
   transition: 0.7s all;
 
+  @media (max-width: 768px) {
+    width: 95%;
+  }
+
   strong {
     color: #2e7bb4;
     cursor: pointer;
@@ -36,11 +40,18 @@ const UserBox = styled.div`
   background-repeat: no-repeat;
   background-position: center;
 
+  span {
+    width: 100%;
+    background-image: linear-gradient(to bottom, #00000010, #000);
+    overflow: hidden;
+  }
+
   p {
     color: #fff;
     margin-left: 5px;
     margin-bottom: 10px;
     font-size: 14px;
+    width: 80%;
   }
 `;
 
@@ -56,6 +67,7 @@ const Followers = ({
   seeAllFollowers,
   userData,
   setSeeAllFollowers,
+  isDesktop,
 }) => {
   const ordenate = followersData.slice(0, 6);
 
@@ -70,7 +82,9 @@ const Followers = ({
           <Box>
             {(seeAllFollowers ? followersData : ordenate).map((item, index) => (
               <UserBox key={index} image={item.avatar_url}>
-                <p>{item.login}</p>
+                <span>
+                  <p>{item.login}</p>
+                </span>
               </UserBox>
             ))}
           </Box>

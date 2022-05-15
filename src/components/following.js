@@ -14,6 +14,10 @@ const FollowersContainer = styled.div`
   justify-content: space-between;
   transition: 0.7s all;
 
+  @media (max-width: 768px) {
+    width: 95%;
+  }
+
   strong {
     color: #2e7bb4;
     cursor: pointer;

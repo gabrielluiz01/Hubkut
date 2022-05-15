@@ -22,6 +22,13 @@ const Container = styled.div`
     display: flex;
     justify-content: center;
   }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 100vh;
+
+    border-radius: 0;
+  }
 `;
 
 const ImageProfile = styled.img`
@@ -49,6 +56,11 @@ const Separator = styled.div`
   margin: 10px 0;
   padding: 12px 0;
 
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+  }
+
   :first-of-type {
     border-bottom: none;
   }
@@ -57,6 +69,7 @@ const Separator = styled.div`
     display: flex;
     align-items: center;
     margin: 10px 0;
+    overflow: hidden;
 
     img {
       margin-right: 15px;
@@ -69,39 +82,42 @@ const Separator = styled.div`
   }
 `;
 
-const SidebarProfile = ({ data }) => {
+const SidebarProfile = ({ data, isOpenMenu, isDesktop }) => {
   return (
-    <Container>
-      <figure>
-        <ImageProfile src={data?.avatar_url} />
-      </figure>
-      <Separator>
-        <Name>{data?.name}</Name>
-        <Bio>{data?.bio}Front-end Developer</Bio>
-      </Separator>
-      <Separator>
-        <span>
-          <img src={CompanyIcon} />
-          <p>{data?.company}</p>
-        </span>
-        <span>
-          <img src={LocationIcon} />
-          <p>{data?.location}</p>
-        </span>
-        <span>
-          <img src={Email} />
-          <p>{data?.email}</p>
-        </span>
-        <span>
-          <img src={UrlIcon} />
-          <p>{data?.blog}</p>
-        </span>
-        <span>
-          <img src={Twitter} />
-          <p>{data?.twitter_username}</p>
-        </span>
-      </Separator>
-    </Container>
+    !isDesktop &&
+    isOpenMenu && (
+      <Container>
+        <figure>
+          <ImageProfile src={data?.avatar_url} />
+        </figure>
+        <Separator>
+          <Name>{data?.name}</Name>
+          <Bio>{data?.bio}Front-end Developer</Bio>
+        </Separator>
+        <Separator>
+          <span>
+            <img src={CompanyIcon} />
+            <p>{data?.company}</p>
+          </span>
+          <span>
+            <img src={LocationIcon} />
+            <p>{data?.location}</p>
+          </span>
+          <span>
+            <img src={Email} />
+            <p>{data?.email}</p>
+          </span>
+          <span>
+            <img src={UrlIcon} />
+            <p>{data?.blog}</p>
+          </span>
+          <span>
+            <img src={Twitter} />
+            <p>{data?.twitter_username}</p>
+          </span>
+        </Separator>
+      </Container>
+    )
   );
 };
 

@@ -14,6 +14,10 @@ const WelcomeBox = styled.div`
   background-color: #fff;
   padding: 20px 0 20px 30px;
 
+  @media (max-width: 768px) {
+    width: 95%;
+  }
+
   h1 {
     font-weight: normal;
   }

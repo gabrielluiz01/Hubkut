@@ -11,6 +11,10 @@ const WantToDoBox = styled.div`
   padding: 20px 2px 20px 30px;
   margin-top: 30px;
 
+  @media (max-width: 768px) {
+    width: 95%;
+  }
+
   h2 {
     font-weight: 500;
     font-size: 20px;

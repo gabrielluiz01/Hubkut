@@ -5,6 +5,7 @@ import Stars from "../assets/stars.png";
 import RepoIcon from "../assets/repos.png";
 
 import Loader from "./loader";
+import { useNavigate } from "react-router-dom";
 
 const RepoBox = styled.div`
   width: 616px;
@@ -13,6 +14,22 @@ const RepoBox = styled.div`
   padding: 20px 30px 20px 30px;
   background-color: #fff;
   margin: 30px 0;
+
+  @media (max-width: 768px) {
+    width: 95%;
+  }
+
+  .seeMore {
+    color: #2e7bb4;
+    text-align: right;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: 0.7s all;
+
+    :hover {
+      text-decoration: underline;
+    }
+  }
 
   h2 {
     font-size: 20px;
@@ -92,6 +109,9 @@ const LatestRepos = ({ repos }) => {
   );
 
   ordenateRepos = ordenateRepos.slice(0, 3);
+
+  const navigate = useNavigate();
+
   return (
     <RepoBox>
       {repos.length ? (
@@ -114,6 +134,9 @@ const LatestRepos = ({ repos }) => {
               </div>
             ))}
           </ContentRepo>
+          <p className="seeMore" onClick={() => navigate("/repos")}>
+            Ver todos
+          </p>
         </>
       ) : (
         <Loader />
