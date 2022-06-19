@@ -11,13 +11,13 @@ git clone https://github.com/gabrielluiz01/Hubkut.git
 yarn install or npm install
 yarn start or npm start
 
-## Prints
+## Imagens
 
 Página de login
-image.png
+![image](https://user-images.githubusercontent.com/48768741/174481110-85ee1f07-9a9b-4264-89a7-80a62b5cfebb.png)
 
 Homepage
-image.png
+![image](https://user-images.githubusercontent.com/48768741/174481086-60808d86-b59d-4bca-a1c7-b03fae298eae.png)
 
 Página de repositórios
 ![image](https://user-images.githubusercontent.com/48768741/174481028-e20f7c77-fa91-4386-b183-103b43ab444f.png)
