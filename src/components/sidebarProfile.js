@@ -9,8 +9,8 @@ import LocationIcon from "../assets/pin.png";
 import UrlIcon from "../assets/url.png";
 
 const Container = styled.div`
-  width: 200px;
-  height: 545px;
+  width: 300px;
+  min-height: 545px;
   background-color: #fff;
   border-radius: 8px;
   margin-bottom: 30px;
@@ -84,8 +84,6 @@ const Separator = styled.div`
 
 const SidebarProfile = ({ data, isOpenMenu, isDesktop }) => {
   return (
-    !isDesktop &&
-    isOpenMenu && (
       <Container>
         <figure>
           <ImageProfile src={data?.avatar_url} />
@@ -118,7 +116,6 @@ const SidebarProfile = ({ data, isOpenMenu, isDesktop }) => {
         </Separator>
       </Container>
     )
-  );
 };
 
 export default SidebarProfile;
