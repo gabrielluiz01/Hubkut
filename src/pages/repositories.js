@@ -115,12 +115,11 @@ const Repositories = () => {
 
     setUserData(formatedData);
     getRepos();
-  }, []);
+  }, [repos]);
 
   const getRepos = async () => {
     try {
-      const { data } = await api.get(`/users/${userData?.login}/repos`);
-
+      const { data } = await api.get(`/users/${userData.login}/repos`);
       setRepos(data);
     } catch (err) {
       console.log("error", err);
