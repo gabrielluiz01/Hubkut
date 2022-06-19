@@ -43,3 +43,5 @@ Será necessário ter instalado [Git](https://git-scm.com), [Node.js](https://no
 
 ### Página de repositórios
 ![image](https://user-images.githubusercontent.com/48768741/174481028-e20f7c77-fa91-4386-b183-103b43ab444f.png)
+
+Feito por Gabriel Luiz 😁
