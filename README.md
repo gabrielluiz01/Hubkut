@@ -22,7 +22,7 @@ Será necessário ter instalado [Git](https://git-scm.com), [Node.js](https://no
  $ git clone https://github.com/gabrielluiz01/Cronometro-de-estudos.git
  
  # Entre na pasta via terminal
- $ cd Cronometro-de-estudos
+ $ cd Hubkut
  
  # instale todas as dependências do projeto
  $ yarn install ou npm install
